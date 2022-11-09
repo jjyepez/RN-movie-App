@@ -4,7 +4,7 @@ import { styles } from './styles/StyledTitleBar.style';
 export const StyledTitleBar = ({title}:any) => {
     return (
         <View style={styles.titleContainer}>
-            <Text>{title}</Text>
+            <Text style={styles.titleText}>{title}</Text>
         </View>
     )
 }

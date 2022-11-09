@@ -1,23 +1,30 @@
 import { createStackNavigator } from '@react-navigation/stack';
+import { Movie } from '../../logic/interfaces/movieInterface';
 
 import { DetailsScreen } from '../screens/DetailsScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  HomeScreen: undefined;
+  DetailsScreen: Movie;
+}
+
+const Stack = createStackNavigator<RootStackParams>();
 
 export const Navigation = () => {
   return (
     <Stack.Navigator
-        screenOptions={{
-            headerShown: false,
-            cardStyle: {
-                backgroundColor: 'white'
-            }
-        }}
+      initialRouteName='HomeScreen'
+      screenOptions={{
+          headerShown: false,
+          cardStyle: {
+              backgroundColor: 'white'
+          }
+      }}
     >
         
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
 
     </Stack.Navigator>
   )
