@@ -12,6 +12,10 @@ export type RootStackParams = {
 const Stack = createStackNavigator<RootStackParams>();
 
 export const Navigation = () => {
+  return MovieNavigation(); 
+}
+
+const MovieNavigation = () =>  {
   return (
     <Stack.Navigator
       initialRouteName='HomeScreen'
