@@ -10,13 +10,16 @@ import changeNavigationBarColor from 'react-native-navigation-bar-color';
 export const App = () => {
 
   useEffect(() => {
-    (async () => await changeNavigationBarColor('#ffffff', true, true))();
+    (async () => await changeNavigationBarColor('#000000', false, true))();
   },[]);
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor='#ffffff' barStyle='dark-content'/>
+
+      <StatusBar backgroundColor='#000000' barStyle='light-content'/>
+      
       <Navigation />
+
     </NavigationContainer>
   )
 }

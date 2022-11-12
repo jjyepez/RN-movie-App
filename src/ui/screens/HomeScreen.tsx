@@ -1,4 +1,4 @@
-import { ScrollView, Text, View, ActivityIndicator, useWindowDimensions, FlatList } from 'react-native';
+import { ScrollView, View, ActivityIndicator, useWindowDimensions } from 'react-native';
 import { useMovies } from '../../logic/hooks/useMovies';
 import { MoviePoster } from '../components/MoviePoster';
 
@@ -42,6 +42,7 @@ export const HomeScreen = () => {
                             itemWidth={300}
                             vertical={false}
                         />
+                        
                     </View>
 
                     <HorizontalSlider
